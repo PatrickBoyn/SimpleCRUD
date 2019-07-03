@@ -57,7 +57,7 @@ namespace SimpleCRUD.Controllers
 
             _dataRepository.Update(employeeToUpdate, employee);
             // TODO find a better way of handling this.
-            return NoContent();
+            return Ok(employee);
         }
 
 
@@ -71,7 +71,7 @@ namespace SimpleCRUD.Controllers
 
             _dataRepository.Delete(employee);
             
-            return NoContent();
+            return Ok(employee);
         }
     }
 }
